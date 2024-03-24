@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Sleep Monitor</string>
+    <string name="title_name2">Budget Planner</string>
+    <string name="title_name1">Sleep Monitor</string>
+    <string name="next_button">Далее</string>
+    <string name="back_button">Назад</string>
+    <string name="log_button">Вывод в Log</string>
+    <string name="todo">TODO</string>
+    <string name="input_field">Поле для ввода</string>
+    <string name="changeActivity">Передать данные</string>
+    <string name="secondactivity">SecondActivity</string>
+    <string name="mainactivity">Вернуться в MainActivity</string>
+    <string name="change">Текст изменен программно</string>
+    <string name="listview">ListView</string>
+    <string name="returnList">Вернуться на стартовый экран</string>
+    <string name="recyclerview">RecyclerView </string>
+    <string name="notification">Notification</string>
+</resources>
