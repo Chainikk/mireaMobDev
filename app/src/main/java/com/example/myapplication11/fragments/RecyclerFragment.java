@@ -12,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.myapplication11.Item;
+import com.example.myapplication11.adapters.Item;
 import com.example.myapplication11.R;
-import com.example.myapplication11.RecycleAdapter;
+import com.example.myapplication11.adapters.RecycleAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

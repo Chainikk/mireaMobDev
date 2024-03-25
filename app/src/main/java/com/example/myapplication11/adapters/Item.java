@@ -1,4 +1,4 @@
-package com.example.myapplication11;
+package com.example.myapplication11.adapters;
 
 public class Item {
 

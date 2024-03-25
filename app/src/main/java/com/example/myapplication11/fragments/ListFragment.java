@@ -13,8 +13,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.myapplication11.Item;
-import com.example.myapplication11.ListAdapter;
+import com.example.myapplication11.adapters.Item;
+import com.example.myapplication11.adapters.ListAdapter;
 import com.example.myapplication11.R;
 
 import java.util.ArrayList;
