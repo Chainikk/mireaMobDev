@@ -1,6 +1,7 @@
-package com.example.myapplication11.adapters;
+package com.example.myapplication11.UI.View.Adapters;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication11.DATA.Model.Item;
 import com.example.myapplication11.R;
 
 import java.util.List;
@@ -38,30 +41,26 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         Item item = items.get(position);
         holder.imageView.setImageResource(item.getImageResource());
         holder.textView.setText(item.getText());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int clickedPosition = holder.getAdapterPosition();
-                Toast.makeText(v.getContext(), "Item " + (clickedPosition + 1), Toast.LENGTH_SHORT).show();
-                Log.d("RecyclerView", "Item " + (clickedPosition + 1));
-            }
+        holder.layout.setOnClickListener(v -> {
+            int clickedPosition = holder.getAdapterPosition();
+            Toast.makeText(v.getContext(), "Day " + (clickedPosition + 1), Toast.LENGTH_SHORT).show();
+            Log.d("RecyclerView", "Day " + (clickedPosition + 1));
+            Bundle bundle =  new Bundle();
+            bundle.putString("itemId", item.getText());
+            holder.itemView.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.itemprofile, bundle));
         });
     }
-
     @Override
-    public int getItemCount() {
-        return items.size();
-    }
-
+    public int getItemCount() {return items.size();}
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
         ImageView imageView;
         TextView textView;
-
+        ViewGroup layout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageViewItem);
             textView = itemView.findViewById(R.id.textViewItem);
+            layout = itemView.findViewById(R.id.item_container);
         }
     }
 }

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/start"
-        android:name="com.example.myapplication11.fragments.StartFragment"
+        android:name="com.example.myapplication11.UI.View.StartFragment"
         android:label="Home"
         tools:layout="@layout/fragment_start">
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/list"
-        android:name="com.example.myapplication11.fragments.ListFragment"
+        android:name="com.example.myapplication11.UI.View.ListFragment"
         android:label="ListView"
         tools:layout="@layout/fragment_list">
         <action
@@ -31,12 +31,23 @@
 
     <fragment
         android:id="@+id/recycler"
-        android:name="com.example.myapplication11.fragments.RecyclerFragment"
+        android:name="com.example.myapplication11.UI.View.RecyclerFragment"
         android:label="RecyclerView"
         tools:layout="@layout/fragment_recycler">
         <action
             android:id="@+id/from_recycler_to_start"
             app:destination="@id/start"/>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/itemprofile"
+        android:name="com.example.myapplication11.UI.View.ItemProfile"
+        android:label="ItemProfile"
+        tools:layout="@layout/fragment_itemprofile">
+        <action
+            android:id="@+id/from_item_to_recycler"
+            app:destination="@id/recycler"/>
 
     </fragment>
 

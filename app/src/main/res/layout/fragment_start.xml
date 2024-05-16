@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.StartFragment">
+    tools:context=".UI.View.StartFragment">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="145dp"
@@ -52,14 +52,6 @@
             android:layout_height="64dp"
             android:text="@string/recyclerview"
             app:layout_constraintStart_toStartOf="parent" />
-        <Button
-            android:id="@+id/notification"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="@string/notification"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
     </LinearLayout>
 
 

@@ -1,4 +1,4 @@
-package com.example.myapplication11.adapters;
+package com.example.myapplication11.UI.View.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.myapplication11.DATA.Model.Item;
 import com.example.myapplication11.R;
 
 import java.util.List;
@@ -20,14 +21,12 @@ public class ListAdapter extends ArrayAdapter<Item> {
     private final LayoutInflater inflater;
     private final int layout;
     private final List<Item> items;
-
     public ListAdapter(@NonNull Context context, int resource, List<Item> items) {
         super(context, resource, items);
         this.inflater = LayoutInflater.from(context);
         this.layout = resource;
         this.items = items;
     }
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -37,8 +36,6 @@ public class ListAdapter extends ArrayAdapter<Item> {
         Item item = items.get(position);
         textView.setText(item.getText());
         imageView.setImageResource(item.getImageResource());
-
-
         return view;
     }
 }

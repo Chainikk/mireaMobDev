@@ -1,4 +1,4 @@
-package com.example.myapplication11.adapters;
+package com.example.myapplication11.DATA.Model;
 
 public class Item {
 
@@ -9,11 +9,15 @@ public class Item {
         this.imageResource = imageResource;
         this.text = text;
     }
-
+    public void setImageResource(int imageResource) {
+        this.imageResource = imageResource;
+    }
+    public void setText(String text) {
+        this.text = text;
+    }
     public int getImageResource() {
         return imageResource;
     }
-
     public String getText() {
         return text;
     }

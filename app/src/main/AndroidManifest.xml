@@ -21,10 +21,10 @@
         </service>
 
         <activity
-            android:name=".SecondActivity"
+            android:name=".UI.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
