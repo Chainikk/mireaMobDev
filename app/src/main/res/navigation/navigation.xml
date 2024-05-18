@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/start">
-
+    <fragment
+        android:id="@+id/first"
+        android:name="com.example.myapplication11.UI.View.FirstFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/from_first_to_start"
+            app:destination="@+id/start"/>
+    </fragment>
     <fragment
         android:id="@+id/start"
         android:name="com.example.myapplication11.UI.View.StartFragment"
@@ -16,6 +24,9 @@
         <action
             android:id="@+id/from_start_to_recycler"
             app:destination="@id/recycler"/>
+        <action
+            android:id="@+id/from_start_to_first"
+            app:destination="@+id/first"/>
     </fragment>
 
     <fragment

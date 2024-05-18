@@ -5,17 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UI.View.StartFragment">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/image_view"
+
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="94dp"
+        android:layout_height="11dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <TextView
+        android:id="@+id/textSH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="145dp"
-        android:layout_height="170dp"
+        android:layout_width="124dp"
+        android:layout_height="99dp"
         android:layout_marginTop="110dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/clock"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.879"
+        app:srcCompat="@drawable/clock" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -37,6 +89,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textView">
+        <EditText
+            android:id="@+id/editField1"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/light_green"
+            android:hint="@string/input_field"
+            android:inputType="text"
+            android:autofillHints="text" />
 
         <Button
             android:id="@+id/toListFragment"
@@ -44,13 +104,17 @@
             android:layout_height="64dp"
             android:text="@string/listview"
             app:layout_constraintStart_toStartOf="parent" />
-
-
         <Button
             android:id="@+id/toRecyclerFragment"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:text="@string/recyclerview"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/common_files_ds"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="Получить данные из БД"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 

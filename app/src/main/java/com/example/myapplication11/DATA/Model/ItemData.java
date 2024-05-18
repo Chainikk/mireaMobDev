@@ -1,6 +1,8 @@
 package com.example.myapplication11.DATA.Model;
 
-public class ItemData {
+import java.io.Serializable;
+
+public class ItemData implements Serializable {
     private int id;
     private String name;
     private String description;
